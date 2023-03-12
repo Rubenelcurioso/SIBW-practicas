@@ -10,13 +10,15 @@ body{
 }
 
 .header{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana;
     grid-area: header;
     border-style:groove;
+    border-color: #18578C;
+    border-width: thin;
     display: grid;
     grid-template-areas: 
     "logo encabezado encabezado";
-    background-color: rgb(107, 107, 165);
+    background-color: #acddf3dc;
 }
 
 .Botones{
@@ -37,12 +39,14 @@ body{
 .Panel_bod{
     display: grid;
     grid-area: Panel_bod;
-    border-style: solid;
-    border-radius: 5px;
     grid-template-areas: 
     "Cuerpo Cuerpo Imagenes";
     grid-gap: 10px;
-    background:linear-gradient(to top,white,rgb(58, 58, 58));
+    border-style:solid;
+    border-radius: 10px;
+    border-color: #18578C;
+    border-width: thin;
+    background-color: #acddf3dc;
 }
 
 .Cuerpo{
@@ -63,9 +67,16 @@ body{
 
 .Panel_nav{
     grid-area: Panel_nav;
-    border-style: solid;
-    border-radius: 5px;
-    background:linear-gradient(to bottom,white,rgba(33, 90, 203, 0.504));
+    border-style:solid;
+    border-radius: 10px;
+    border-color: #18578C;
+    border-width: thin;
+    background-color: #acddf3dc;
+}
+
+ul{
+    display:grid;
+    grid-gap: 20%;
 }
 
 .Cientifico{
@@ -86,8 +97,17 @@ body{
     margin: 5px;
 }
 
-footer{
+.footer{
+    font-family: sans-family;
     grid-area: footer;
+    font-size: large;
+    text-align: center;
+    font-weight: bolder;
     border-style: solid;
-    border-radius: 5px;
+    border-color: #18578C;
+    border-width: thin;
+    background-color: #acddf3dc;
+}
+#git{
+    width: 10%;
 }

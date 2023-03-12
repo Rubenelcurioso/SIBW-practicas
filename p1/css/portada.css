@@ -10,24 +10,36 @@ body{
 }
 
 .header{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:Verdana;
     grid-area: header;
     border-style:groove;
+    border-color: #18578C;
+    border-width: thin;
     display: grid;
     grid-template-areas: 
     "logo encabezado encabezado";
-    background-color: rgb(107, 107, 165);
+    background-color: #acddf3dc;
+   
 }
 
-.Botones{
+.Botones{ /*Botones ocultan bordes*/
     font:menu;
     background-color: transparent;
     border-style: none;
 }
 
+.Botones:hover{
+    transform:scale(1.3);
+}
+
 #logo{
     grid-area: logo;
     background: transparent;
+    transition: transform .3s ease-out;
+}
+
+#logo:hover{
+    transform: rotate(45deg);
 }
 
 #hName{
@@ -37,25 +49,41 @@ body{
 .Panel_bod{
     display: grid;
     grid-area: Panel_bod;
-    border-style: solid;
-    border-radius: 5px;
-    grid-template-columns: 290px 290px 290px;
+    grid-template-columns: 32% 32% 32%; /*33% sale del cuadros*/
     grid-gap: 10px;
-    
+    background-color: #acddf3dc;
+    border-style:solid;
+    border-radius:10px;
+    border-color: #18578C;
+    border-width: thin;
 }
 
 .Panel_nav{
     grid-area: Panel_nav;
-    border-style: solid;
-    border-radius: 5px;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: #18578C;
+    border-width: thin;
+    background-color: #acddf3dc;
+}
+
+ul{
+    display:grid;
+    grid-gap: 20%;
 }
 
 .Cientifico{
+    border-radius:10px;
+    filter:blur(1px);
     text-align: center;
-    border-style: dashed;
-    border-radius: 5px;
-    background-color: rgb(77, 77, 77);
-    margin: 10px;
+    background-color:#18578C;
+    margin: 5%;
+    box-shadow: 0px 10px 10px -5px black;
+}
+
+.Cientifico:hover{
+    -webkit-filter:blur(0px);
+    transform: scale(1.1);
 }
 
 .Imagenes{
@@ -68,8 +96,19 @@ body{
     margin: 5px;
 }
 
-footer{
+.footer{
+    font-family: sans-family;
     grid-area: footer;
+    font-size: large;
+    text-align: center;
+    font-weight: bolder;
     border-style: solid;
-    border-radius: 5px;
+    border-color: #18578C;
+    border-width: thin;
+    background-color: #acddf3dc;
+}
+
+#git{
+    height:10%;
+    width: 10%;
 }
