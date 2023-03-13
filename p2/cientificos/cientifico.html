@@ -3,6 +3,7 @@
     <head>
         <title>Práctica 1</title>
         <link href="../css/cientifico.css" rel="stylesheet" type="text/css">
+        <script src="/p2/js/cientifico.js" defer></script>
     </head>
     <body>
         <header class="header">
@@ -26,11 +27,30 @@
                     <img class="Imagen" src="../img/AlbertEinstein.jpg" alt="Albert Einstein">
                     <img class="Imagen" src="../img/consultoria_innovacion Albert Einstein.jpg" alt="Albert Einstein">
                 </div>
-                <a href="https://www.facebook.com/"><img class="Iconos" width="10%" src="../img/Facebook_f_logo_(2019).svg.png" alt="Facebook"></a>
-                <a href="https://twitter.com"><img class="Iconos" width="10%" src="../img/index-removebg-preview.png" alt="Twitter"></a>
-                <a href="../cientificos/imprimir/imprimir_cientifico.html"><input type="button" value="Imprimir" class="Botones"></a>
+                <div class="Accesibilidad">
+                    <a href="https://www.facebook.com/"><img class="Iconos" width="10%" src="../img/Facebook_f_logo_(2019).svg.png" alt="Facebook" id="FB"></a>
+                    <a href="https://twitter.com"><img class="Iconos" width="10%" src="../img/index-removebg-preview.png" alt="Twitter" id="TW"></a>
+                    <a href="../cientificos/imprimir/imprimir_cientifico.html"><input type="button" value="Imprimir" class="Botones" id="bImp"></a>
+                    <button type="button" class="Botones" id="bComm">Comentarios</button>
+                </div>
+                <section class="Comentarios">
+                    <h4>Comentarios:</h4><hr>
+                    <div class="Comentario">
+                        <p>Rubén 13/03/2023 18:30: Hola</p><hr>
+                    </div>
+                    <div class="Comentario">
+                        <p>Rubén 13/03/2023 18:30: Hola</p><hr>
+                    </div>
+                    <form class="Formulario">
+                        <label for="iName" class="Labels">Nombre</label>
+                        <input type="text" id="iName">
+                        <label for="iMail" class="Labels">E-Mail</label>
+                        <input type="text" id="iMail">
+                        <textarea></textarea>
+                        <button type="button" class="Botones">Enviar</button>
+                    </form>
+                </section>
             </section>
-
             <nav class="Panel_nav"><!--Panel de navegacion/auxiliar-->
                 <h3>Páginas de interés</h3>
                     <ul>

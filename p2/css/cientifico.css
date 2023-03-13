@@ -30,6 +30,23 @@ body{
 .Botones:hover{
     transform:scale(1.3);
 }
+
+#FB{
+    grid-area: FB;
+}
+
+#TW{
+    grid-area: TW;
+}
+
+#bImp{
+    grid-area: Imprimir;
+}
+
+#bComm{
+    grid-area: Comentarios;
+}
+
 #logo{
     grid-area: logo;
     background: transparent;
