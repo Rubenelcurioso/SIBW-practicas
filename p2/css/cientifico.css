@@ -1,0 +1,110 @@
+/*Ordenado por estructura*/
+body{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+        "header header header"
+        "Panel_bod Panel_bod Panel_nav"
+        "footer footer footer";
+    background-image:url("../img/Chemistry.jpg");
+}
+
+.header{
+    font-family:Verdana;
+    grid-area: header;
+    border-style:groove;
+    border-color: #18578C;
+    border-width: thin;
+    display: grid;
+    grid-template-areas: 
+    "logo encabezado encabezado";
+    background-color: #acddf3dc;
+}
+
+.Botones{ /*Botones ocultan bordes*/
+    font:menu;
+    background-color: transparent;
+    border-style: none;
+}
+
+.Botones:hover{
+    transform:scale(1.3);
+}
+#logo{
+    grid-area: logo;
+    background: transparent;
+}
+
+#hName{
+    grid-area: encabezado;
+}
+
+.Panel_bod{
+    display: grid;
+    grid-area: Panel_bod;
+    grid-template-areas: 
+    "Cuerpo Cuerpo Imagenes";
+    grid-gap: 10px;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: #18578C;
+    border-width: thin;
+    background-color: #acddf3dc;
+}
+
+.Cuerpo{
+    grid-area: Cuerpo;
+    grid-template-rows: 100px 100px 100px;
+}
+
+.Imagen{
+    width:50%;
+    border-image: round;
+    margin:10px;
+}
+
+.Panel_nav{
+    grid-area: Panel_nav;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: #18578C;
+    border-width: thin;
+    background-color: #acddf3dc;
+}
+
+ul{
+    display:grid;
+    grid-gap: 20%;
+}
+
+.Imagenes{/*Div donde contienen las imagenes*/
+    display: grid;
+    grid-area: Imagenes;
+}
+
+.Nombres{
+    margin: 5px;
+}
+
+.Iconos{
+    margin:3px;
+}
+
+.footer{
+    font-family: sans-family;
+    grid-area: footer;
+    font-size: large;
+    text-align: center;
+    font-weight: bolder;
+    border-style: solid;
+    border-color: #18578C;
+    border-width: thin;
+    background-color: #acddf3dc;
+}
+
+#git{
+    text-align: center;
+    height: 90px;
+    margin: 5px;
+}
+

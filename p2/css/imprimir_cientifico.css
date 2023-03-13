@@ -1,0 +1,42 @@
+html,body{
+    margin: 1%;
+    font-family: sans-serif;
+}
+.main{
+    display: grid;
+    grid-template-areas:
+    "Cuerpo Cuerpo Imagenes"
+    "footer footer footer";
+    grid-gap: 5%;
+    text-align: center;
+}
+
+.Cuerpo{
+    grid-area: Cuerpo;
+    text-align: left;
+}
+
+.Imagenes{
+    grid-area: Imagenes;
+}
+
+.Imagen{
+    width: 80%;
+    height: 50%;
+}
+
+#logo{
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    margin: 5%;
+    grid-area: footer;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: thin;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    text-align: left center;
+}
