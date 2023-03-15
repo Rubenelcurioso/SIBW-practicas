@@ -125,3 +125,7 @@ ul{
     margin: 5px;
 }
 
+/*Práctica 2*/
+#comentarios{
+    display: none;
+}
