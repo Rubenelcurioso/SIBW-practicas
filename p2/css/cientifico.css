@@ -126,6 +126,13 @@ ul{
 }
 
 /*Práctica 2*/
+.Accesibilidad{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 150%;
+}
+
 #comentarios{
     display: none;
 }
