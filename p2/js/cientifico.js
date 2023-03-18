@@ -13,7 +13,7 @@ botonComentario.addEventListener("click",mostrarComentarios);
 
 const formulario = document.getElementById("formulario");
 
-formulario.addEventListener("submit",(evento) => {
+formulario.addEventListener("submit",(evento) => { //Función inline para añadir el comentario
     evento.preventDefault(); //Evita que al enviar el comentario se refresque la página
     //Obtener valores del comentario
     const campoNombre = document.getElementById("iName");
@@ -45,3 +45,11 @@ formulario.addEventListener("submit",(evento) => {
 
     campoNombre.value=campoMail.value=campoComentario.value=""; //Vacio el formulario
 });
+
+var cajaComentario = document.getElementById("iTArea");
+
+function censuraPalabra(){
+     var palabra = cajaComentario.value
+}
+
+formulario.addEventListener("input",);

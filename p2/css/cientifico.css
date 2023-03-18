@@ -25,6 +25,7 @@ body{
     font:menu;
     background-color: transparent;
     border-style: none;
+    margin: 5px;
 }
 
 .Botones:hover{
@@ -32,19 +33,11 @@ body{
 }
 
 #FB{
-    grid-area: FB;
+    width: 25%;
 }
 
 #TW{
-    grid-area: TW;
-}
-
-#bImp{
-    grid-area: Imprimir;
-}
-
-#bComm{
-    grid-area: Comentarios;
+    width: 80%;
 }
 
 #logo{
@@ -104,7 +97,7 @@ ul{
 }
 
 .Iconos{
-    margin:3px;
+    margin: 5px;
 }
 
 .footer{
@@ -127,10 +120,10 @@ ul{
 
 /*Práctica 2*/
 .Accesibilidad{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 150%;
+    display: flex;/*Organización unidimensional*/
+    justify-content: space-between;/*Espacio entre items*/
+    align-items: center; /*Alinear los elementos(de la caja)*/
+    
 }
 
 #comentarios{
