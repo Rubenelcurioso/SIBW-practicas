@@ -41,13 +41,13 @@
                     <div class="Comentario">
                         <p>Rubén 13/03/2023 18:30: Hola</p><hr>
                     </div>
-                    <form class="Formulario">
+                    <form class="Formulario" onsubmit="agregarComentario(evento)" id="formulario">
                             <label for="iName" class="Labels">Nombre</label>
                             <input type="text" id="iName">
                         <label for="iMail" class="Labels">E-Mail</label>
                         <input type="text" id="iMail">
-                        <textarea></textarea>
-                        <button type="button" class="Botones">Enviar</button>
+                        <textarea id="iTArea"></textarea>
+                        <button type="submit" id="bSumb" class="Botones">Enviar</button>
                     </form>
                 </section>
             </section>
