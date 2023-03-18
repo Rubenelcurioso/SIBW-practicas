@@ -49,7 +49,11 @@ formulario.addEventListener("submit",(evento) => { //Función inline para añadi
 var cajaComentario = document.getElementById("iTArea");
 
 function censuraPalabra(){
-     var palabra = cajaComentario.value
+     var texto = cajaComentario.value;//Texto del text area
+     const delimitadores = [" ",",",".","_","-"];
+     var palabra = texto.split(delimitadores);//Trocea el texto con los delimitadores en un array
+
+     cajaComentario.value = texto.replace("puta","****"); //Busca la palabra prohibida y la sustituye
 }
 
-formulario.addEventListener("input",);
+formulario.addEventListener("input",censuraPalabra);
