@@ -46,14 +46,22 @@ formulario.addEventListener("submit",(evento) => { //Función inline para añadi
     campoNombre.value=campoMail.value=campoComentario.value=""; //Vacio el formulario
 });
 
+
 var cajaComentario = document.getElementById("iTArea");
 
 function censuraPalabra(){
-     var texto = cajaComentario.value;//Texto del text area
-     const delimitadores = [" ",",",".","_","-"];
-     var palabra = texto.split(delimitadores);//Trocea el texto con los delimitadores en un array
-
-     cajaComentario.value = texto.replace("puta","****"); //Busca la palabra prohibida y la sustituye
+    var texto = cajaComentario.value;
+    var palabrasProhibidas = ["puta","puto","tonto","tonta","gilipollas","inutil","desgraciado","desgraciada","vago","vaga"];
+    var filtroPalabras = {}; //Filtro ira relleno de * según caracteres de las palabras
+    for(let i=0; i<palabrasProhibidas.length; i++) {//Rellena el array
+        filtroPalabras[palabrasProhibidas[i]] = "*".repeat(palabrasProhibidas[i].length);
+    }
+    for (let i = 0; i < palabrasProhibidas.length; i++){
+        var expresion_regular = new RegExp(palabrasProhibidas[i],"ig"); //Expresión regular global "i"= quita el case sensitive, "g"= global
+        texto = texto.replaceAll(expresion_regular, filtroPalabras[palabrasProhibidas[i]]);
+    }
+    cajaComentario.value = texto; //Actualiza el contenido
 }
 
-formulario.addEventListener("input",censuraPalabra);
+cajaComentario.addEventListener("input", censuraPalabra);
+
