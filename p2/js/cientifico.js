@@ -2,7 +2,7 @@ const botonComentario = document.getElementById("bComm");
 
 function mostrarComentarios(){
     var seccionComments = document.getElementById("comentarios"); //Obtener div
-    if(seccionComments.style.display=="none"){ //Modificar visibilidad si no se ve
+    if(seccionComments.style.display=="none" || seccionComments.style.display==""){ //Modificar visibilidad si no se ve
         seccionComments.style.display = "block";
     }else{
         seccionComments.style.display = "none";
@@ -24,6 +24,8 @@ formulario.addEventListener("submit",(evento) => { //Función inline para añadi
         alert("No puede dejar los campos en blanco");
         return;
     }
+
+    validaCorreo(campoMail.value);
 
     const caja_comentario = document.createElement("div",{
         class: "Comentario" //Agrega directamente el div a la clase
@@ -65,3 +67,10 @@ function censuraPalabra(){
 
 cajaComentario.addEventListener("input", censuraPalabra);
 
+function validaCorreo(email){
+   var expresionRegular = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i; //Expresión regular correo: fuente -> https://es.stackoverflow.com/questions/453176/como-validar-correctamente-un-email-con-expresiones-regulares
+    if(!expresionRegular.test(email.value)){
+        alert("Email inválido");
+        return;
+    }
+}
