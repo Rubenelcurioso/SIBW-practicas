@@ -25,7 +25,7 @@ formulario.addEventListener("submit",(evento) => { //Función inline para añadi
         return;
     }
 
-    validaCorreo(campoMail.value);
+    if(!validaCorreo(campoMail.value)) return; //Si no es válido no escriba comentario
 
     const caja_comentario = document.createElement("div",{
         class: "Comentario" //Agrega directamente el div a la clase
@@ -71,6 +71,7 @@ function validaCorreo(email){
    var expresionRegular = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i; //Expresión regular correo: fuente -> https://es.stackoverflow.com/questions/453176/como-validar-correctamente-un-email-con-expresiones-regulares
     if(!expresionRegular.test(email.value)){
         alert("Email inválido");
-        return;
+        return false;
     }
+    return true;
 }
