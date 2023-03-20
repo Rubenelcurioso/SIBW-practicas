@@ -25,7 +25,10 @@ formulario.addEventListener("submit",(evento) => { //Función inline para añadi
         return;
     }
 
-    if(!validaCorreo(campoMail.value)) return; //Si no es válido no escriba comentario
+    if(!validarEmail(campoMail.value)){
+        alert("Email inválido");
+        return;
+    }
 
     const caja_comentario = document.createElement("div",{
         class: "Comentario" //Agrega directamente el div a la clase
@@ -67,11 +70,11 @@ function censuraPalabra(){
 
 cajaComentario.addEventListener("input", censuraPalabra);
 
-function validaCorreo(email){
-   var expresionRegular = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i; //Expresión regular correo: fuente -> https://es.stackoverflow.com/questions/453176/como-validar-correctamente-un-email-con-expresiones-regulares
-    if(!expresionRegular.test(email.value)){
-        alert("Email inválido");
-        return false;
-    }
-    return true;
+
+function validarEmail(email) {
+    // Expresión regular para validar el email -> http://w3.unpocodetodo.info/utiles/regex-ejemplos.php?type=email RFC 5322
+    const expresion_regular = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+    
+    // Retorna true si el email es válido, de lo contrario false
+    return expresion_regular.test(String(email).toLowerCase());
 }
