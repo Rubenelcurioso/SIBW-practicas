@@ -44,7 +44,8 @@
         $palabras_prohibidas = array();
         //Aquí no hace falta uso de sentencias preparadas pues no pedimos nada
         $resultado = $mysqli->prepare("SELECT * FROM palabras_prohibidas");#Coger todas las palabras
-       
+        $resultado->execute();
+        $resultado = $resultado->get_result();
        if($resultado->num_rows > 0){
         while($fila = $resultado->fetch_assoc()){
             $palabras_prohibidas[] = $fila['palabra'];
