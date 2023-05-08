@@ -1,0 +1,61 @@
+/*Ordenado por estructura*/
+#FB{
+    width: 25%;
+}
+
+#TW{
+    width: 80%;
+}
+
+.Panel_bod{
+    display: grid;
+    grid-area: Panel_bod;
+    grid-template-areas: 
+    "Cuerpo Cuerpo Imagenes";
+    grid-gap: 10px;
+    border-style:solid;
+    border-radius: 10px;
+    border-color: #18578C;
+    border-width: thin;
+    background-color: #acddf3dc;
+}
+
+.Cuerpo{
+    grid-area: Cuerpo;
+    grid-template-rows: 100px 100px 100px;
+}
+
+.Imagen{
+    width:50%;
+    border-image: round;
+    margin:10px;
+}
+
+
+.Imagenes{/*Div donde contienen las imagenes*/
+    display: grid;
+    grid-area: Imagenes;
+}
+
+.Iconos{
+    margin: 5px;
+}
+
+
+#git{
+    text-align: center;
+    height: 90px;
+    margin: 5px;
+}
+
+/*Práctica 2*/
+.Accesibilidad{
+    display: flex;/*Organización unidimensional*/
+    justify-content: space-between;/*Espacio entre items*/
+    align-items: center; /*Alinear los elementos(de la caja)*/
+    
+}
+
+#comentarios{
+    display: none;
+}

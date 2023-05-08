@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+    {% block head %}
+        {{ parent() }}
+        <link href="../css/cientifico.css" rel="stylesheet" type="text/css">
+        <script src="../js/cientifico.js" defer></script>
+    {% endblock %}
+    {% block titulo %}
+        {{ parent() }} - {{  cientifico.nombre }}
+    {% endblock %}
+    {% block principal %}
+        {{ parent() }}
+        <div class="Cuerpo"><!--Zona informacion-->
+            <h2>{{ cientifico.nombre }}</h2>
+            <h3>{{ cientifico.nacimiento }} - {{ cientifico.muerte }}</h3><!--Variables declaradas en php van entre 2 llaves con el . se accede a atribs.-->
+            <h4>{{ cientifico.lugar }}</h4>
+            {{ cientifico.texto|raw }}
+        </div>
+        <div class="Imagenes"><!--Zona imagenes-->
+            {% for imagen in imagenes %}
+                <img class="Imagen" src="{{ imagen }}">
+            {% endfor %}
+        </div>
+        <div id="ContenedorAC">
+            <div class="Accesibilidad">
+                <a href="https://www.facebook.com/"><img class="Iconos" src="../img/Facebook_f_logo_(2019).svg.png" alt="Facebook" id="FB"></a>
+                <a href="https://twitter.com"><img class="Iconos" src="../img/index-removebg-preview.png" alt="Twitter" id="TW"></a>
+                <a href="../imprimir.php?id={{ id }}"><input type="button" value="Imprimir" class="Botones" id="bImp"></a>
+                <button type="button" class="Botones" id="bComm">Comentarios</button>
+            </div>
+            <div class="Comentarios" id="comentarios">
+                <h4>Comentarios:</h4><hr>
+                <div class="Comentario">
+                    <p>Rubén Sun Mar 12 2023 20:58:24 GMT+0100 (Central European Standard Time): Buena info bro!</p><hr>
+                </div>
+                <div class="Comentario">
+                    <p>Elpatica007 Sun Mar 19 2023 17:39:14 GMT+0100 (Central European Standard Time): Que pintón!!</p><hr>
+                </div>
+                <form class="Formulario" onsubmit="agregarComentario(evento)" id="formulario">
+                        <label for="iName" class="Labels">Nombre</label>
+                        <input type="text" id="iName">
+                    <label for="iMail" class="Labels">E-Mail</label>
+                    <input type="text" id="iMail">
+                    <textarea id="iTArea"></textarea>
+                    <button type="submit" id="bSumb" class="Botones">Enviar</button>
+                </form>
+            </div>
+        </div>
+    {% endblock %}
+    

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {% block head %}
+        <title>{% block titulo %}SIBW{% endblock %}</title>
+        <link href="../css/base.css" rel="stylesheet" type="text/css">
+    {% endblock %}
+    </head>
+    <body>
+        <header class="header">
+            <h1 id="hName" class="Cabecera">Práctica 1</h1>
+            <img id="logo" class="Cabecera" src="img/logo.png" alt="Logotipo">
+            <input type="button" value="Menú 1" class="Botones Cabecera"><!--No hacen nada de momento-->
+            <input type="button" value="Menú 2" class="Botones Cabecera">
+            <input type="button" value="Menú 3" class="Botones Cabecera">
+        </header>
+            <section class="Panel_bod"><!--Panel informacion-->
+            {% block principal %} <!--Sentencia-->
+            {% endblock %}
+            </section>
+            
+            <nav class="Panel_nav"> <!--Panel de navegacion/auxiliar-->
+               <h3>Páginas de interés</h3>
+               <ul>
+                 <a href="../index.php">Inicio</a>
+                 <a href="https://es.wikipedia.org/wiki/Albert_Einstein">Albert Einstein</a>
+                 <a href="https://es.wikipedia.org/wiki/Nicol%C3%A1s_Cop%C3%A9rnico">Nicolás Copérnico</a>
+                 <a href="https://es.wikipedia.org/wiki/Carl_Friedrich_Gauss">Gauss</a>
+                 <a href="https://es.wikipedia.org/wiki/Nikola_Tesla">Nikola Tesla</a>
+                 <a href="https://es.wikipedia.org/wiki/Michael_Faraday">Faraday</a>
+                 <a href="https://es.wikipedia.org/wiki/Tales_de_Mileto">Tales de Mileto</a>
+              </ul>
+            </nav>
+    </body>
+    <footer class="footer">
+        <a href="https://github.com/Rubenelcurioso"><img id="git" class="Imagenes" src="./img/see-all-open-source-repositories-github-logo-11563031735gubsot66ry-removebg-preview.png"></a>
+        <h2 id="fPar" Class="Pie">© 2023 - Hecho por Rubén Rosales Tapia</p>    
+    </footer>
+</html>

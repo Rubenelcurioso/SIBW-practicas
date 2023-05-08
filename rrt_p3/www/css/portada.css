@@ -1,0 +1,32 @@
+/*Ordenado por estructura*/
+.Panel_bod{
+    display: grid;
+    grid-area: Panel_bod;
+    grid-template-columns: 32% 32% 32%; /*33% sale del cuadros*/
+    grid-gap: 10px;
+    background-color: #acddf3dc;
+    border-style:solid;
+    border-radius:10px;
+    border-color: #18578C;
+    border-width: thin;
+}
+
+.Cientifico{
+    border-radius:10px;
+    filter:blur(1px);
+    text-align: center;
+    background-color:#18578C;
+    margin: 5%;
+    box-shadow: 0px 10px 10px -5px black;
+}
+
+.Cientifico:hover{
+    -webkit-filter:blur(0px);/*Quita filtro blur (No soporta todos navegadores)*/
+    transform: scale(1.1);
+}
+
+.Nombres{
+    margin: 5px;
+}
+
+ 
